@@ -1,23 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <title>Make your First Tranaction on Bitcoin Testnet</title>
-    <meta name="keywords" content="bitcoin, blockchain, testnet, faucet, transaction, proof of work, testnet coin, pay to public key hash">
-    <meta name="description" content="Make your First Transaction on Bitcoin Testnet. Understand how bitcoin transaction works under the hood. Testnet is an alternative Bitcoin blockchain that developers use for testing. Testnet coins do not hold any value.">
+    <meta name="keywords"
+        content="bitcoin, blockchain, testnet, faucet, transaction, proof of work, testnet coin, pay to public key hash">
+    <meta name="description"
+        content="Make your First Transaction on Bitcoin Testnet. Understand how bitcoin transaction works under the hood. Testnet is an alternative Bitcoin blockchain that developers use for testing. Testnet coins do not hold any value.">
     <meta property="og:title" content="Make your First Transaction on Bitcoin Testnet">
-    <meta property="og:description" content="Make your First Transaction on Bitcoin Testnet. Understand how bitcoin transaction works under the hood. Testnet is an alternative Bitcoin blockchain that developers use for testing. Testnet coins do not hold any value.">
+    <meta property="og:description"
+        content="Make your First Transaction on Bitcoin Testnet. Understand how bitcoin transaction works under the hood. Testnet is an alternative Bitcoin blockchain that developers use for testing. Testnet coins do not hold any value.">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="@sha_shekhar_">
     <meta name="twitter:title" content="Make your First Transaction on Bitcoin Testnet">
-    <meta name="twitter:description" content="Make your First Transaction on Bitcoin Testnet. Understand how bitcoin transaction works under the hood. Testnet is an alternative Bitcoin blockchain that developers use for testing. Testnet coins do not hold any value.">
+    <meta name="twitter:description"
+        content="Make your First Transaction on Bitcoin Testnet. Understand how bitcoin transaction works under the hood. Testnet is an alternative Bitcoin blockchain that developers use for testing. Testnet coins do not hold any value.">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" media="screen and (max-width: 768px)" href="mobile.css">
 </head>
+
 <body>
     <div class="container">
         <main class="main-section">
@@ -26,17 +33,21 @@
                 <input type="text" class="form-control box" placeholder="mrCDrCybB6J1vRfbwM5hemdJz73FwDBC8r" readonly>
             </div>
             <small id="link-1"></small>
-            <p style="color: rgb(77, 82, 87)">Click Generate and use the generated address to request testnet bitcoin from faucet.</p>
-            <p>Request tBTC from <a href="https://bitcoinfaucet.uo1.net/" target="_blank"> faucet1</a> or <a href="https://testnet-faucet.com/btc-testnet/" target="_blank"> faucet2</a> or search on Google, Bitcoin Testnet Faucets</p>
+            <p style="color: rgb(77, 82, 87)">Click Generate and use the generated address to request testnet bitcoin
+                from faucet.</p>
+            <p>Request tBTC from <a href="https://bitcoinfaucet.uo1.net/" target="_blank"> faucet1</a> or <a
+                    href="https://testnet-faucet.com/btc-testnet/" target="_blank"> faucet2</a> or search on Google,
+                Bitcoin Testnet Faucets</p>
             <div class="mb-3">
                 <span>How to structure the transaction?</span>
                 <a href="txsComponents.html" target="_blank">Read the Docs.</a>
             </div>
-            
+
             <!-- Sender address -->
             <div class="input-group box">
                 <span class="input-group-text span-color">Sender Address</span>
-                <input type="text" class="num0 form-control" id="sender_addr" placeholder="mohjSavDdQYHRYXcS3uS6ttaHP8amyvX78">
+                <input type="text" class="num0 form-control" id="sender_addr"
+                    placeholder="mohjSavDdQYHRYXcS3uS6ttaHP8amyvX78">
             </div>
             <p class="warning"></p>
 
@@ -45,7 +56,8 @@
                 <label class="output-label mb-1">1. Previous Transaction</label>
                 <div class="input-group">
                     <span class="input-group-text span-color">ID (Hash)</span>
-                    <input type="text" class="num0 form-control" id="prev_tx_id1" placeholder="9796533c33e46d94a9c1db451758c2b6ecc06e199b91c6515f7fee0e3fc54afc">
+                    <input type="text" class="num0 form-control" id="prev_tx_id1"
+                        placeholder="9796533c33e46d94a9c1db451758c2b6ecc06e199b91c6515f7fee0e3fc54afc">
                 </div>
                 <p class="warning"></p>
                 <div style="width:50%" class="input-group">
@@ -56,7 +68,8 @@
             </div>
 
             <div id="sender2" class="box"></div>
-            <button type="button" id="add_sender" class="btn btn-outline-info btn-sm mb-3">Aggregate Transactions</button>
+            <button type="button" id="add_sender" class="btn btn-outline-info btn-sm mb-3">Aggregate
+                Transactions</button>
             <button type="button" id="remove_sender" class="btn btn-outline-secondary btn-sm mb-3">Remove</button>
             <!-- <small style="color: rgb(255, 193, 7);" class="box">only support Transaction aggregation from single address.</small> -->
 
@@ -65,7 +78,8 @@
                 <label class="output-label mb-1">Recipient: 1</label>
                 <div class="input-group">
                     <span class="input-group-text span-color">Address</span>
-                    <input type="text" class="num0 form-control" id="address1" placeholder="mohjSavDdQYHRYXcS3uS6ttaHP8amyvX78">
+                    <input type="text" class="num0 form-control" id="address1"
+                        placeholder="mohjSavDdQYHRYXcS3uS6ttaHP8amyvX78">
                 </div>
                 <p class="warning"></p>
 
@@ -79,7 +93,8 @@
                 <label class="output-label mb-1">Recipient: 2</label>
                 <div class="input-group">
                     <span class="input-group-text span-color">Address</span>
-                    <input type="text" class="num2 form-control" id="address2" placeholder="mohjSavDdQYHRYXcS3uS6ttaHP8amyvX78">
+                    <input type="text" class="num2 form-control" id="address2"
+                        placeholder="mohjSavDdQYHRYXcS3uS6ttaHP8amyvX78">
                 </div>
                 <p class="warning"></p>
 
@@ -92,7 +107,8 @@
             <div id="recipient3" class="box"></div>
 
             <button type="button" id="add_recipient" class="btn btn-outline-info btn-sm mb-3">Add Recipient</button>
-            <button type="button" id="remove_recipient" class="btn btn-outline-danger btn-sm mb-3">Remove Recipient</button>
+            <button type="button" id="remove_recipient" class="btn btn-outline-danger btn-sm mb-3">Remove
+                Recipient</button>
 
             <div class="input-group box mb-3">
                 <span class="input-group-text btn-warning font-adjust">Minimum Recommended Fee</span>
@@ -105,7 +121,8 @@
             <div id="info_block">
                 <h3 style="color: rgb(108, 117, 125);" class="box">Broadcast raw transaction (hex)</h3>
                 <div id="output_tx" class="input-group box mb-3">
-                    <textarea style="color: rgb(108, 117, 125);" class="form-control form-control-sm" rows="6" disabled>0100000001fc4ac53f0eee7f5f51c6919b196ec0ecb6c2581745dbc1a9946de4333c539697010000006a473044022058fa5faf67386a1681b97a2dff6446075ea1ad665b4797b6dadb58904a586b4102206a53c4af093f57d32d6267349f2558b4b96ab37cab85c95fa037b99a64751bae0121033b7e54f87c0366f78c02c3a0ff1f1a74511817536397b954a7f17c78719d210effffffff0250c30000000000001976a914e5b874a97a0e42d96a5c10d11e1b4da264d75ebb88acc0980000000000001976a914007b9d0a0a9a822a0cce6e4e93004266e7c695a588ac00000000</textarea>
+                    <textarea style="color: rgb(108, 117, 125);" class="form-control form-control-sm" rows="6"
+                        disabled>0100000001fc4ac53f0eee7f5f51c6919b196ec0ecb6c2581745dbc1a9946de4333c539697010000006a473044022058fa5faf67386a1681b97a2dff6446075ea1ad665b4797b6dadb58904a586b4102206a53c4af093f57d32d6267349f2558b4b96ab37cab85c95fa037b99a64751bae0121033b7e54f87c0366f78c02c3a0ff1f1a74511817536397b954a7f17c78719d210effffffff0250c30000000000001976a914e5b874a97a0e42d96a5c10d11e1b4da264d75ebb88acc0980000000000001976a914007b9d0a0a9a822a0cce6e4e93004266e7c695a588ac00000000</textarea>
                 </div>
                 <button type="button" id="broadcast" class="btn btn-success mb-3" disabled>BroadCast</button>
             </div>
@@ -115,37 +132,45 @@
             <div class="accordion">
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="panelsStayOpen-headingOne">
-                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#panelsStayOpen-collapseOne">
                             Master PrivateKey and Seed of the Sender
                         </button>
                     </h2>
                     <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
                         <div class="accordion-body">
                             <div class="mb-1">
-                                <label for="master_privkey" class="form-label input-label mb-1">Master PrivateKey</label>
-                                <textarea id="master_privkey" class="num1 form-control" readonly>97172443550006397698777654005462445109222518968121330615839546884518697039800</textarea>
+                                <label for="master_privkey" class="form-label input-label mb-1">Master
+                                    PrivateKey</label>
+                                <textarea id="master_privkey" class="num1 form-control"
+                                    readonly>97172443550006397698777654005462445109222518968121330615839546884518697039800</textarea>
                             </div>
                             <p class="warning"></p>
                             <div class="masterKey-button mb-3">
                                 <div>
                                     <div class="input-group ">
                                         <span class="input-group-text span-color">Seed</span>
-                                        <input type="number" class="num2 form-control" id="master_seed" placeholder="0" readonly>
+                                        <input type="number" class="num2 form-control" id="master_seed" placeholder="0"
+                                            readonly>
                                     </div>
                                     <p class="warning"></p>
                                 </div>
                                 <div>
-                                    <button type="button" id="privKey_enter" class="btn btn-outline-dark btn-sm">Already have?</button>
+                                    <button type="button" id="privKey_enter" class="btn btn-outline-dark btn-sm">Already
+                                        have?</button>
                                 </div>
                             </div>
-                            <button style="width: 100%;" id="cal_address_btn" class="btn btn-outline-secondary mb-1" type="button" disabled>Calculate Address</button>
-                            <input type="text" class="form-control" id="cal_address" placeholder="mohjSavDdQYHRYXcS3uS6ttaHP8amyvX78" readonly>
+                            <button style="width: 100%;" id="cal_address_btn" class="btn btn-outline-secondary mb-1"
+                                type="button" disabled>Calculate Address</button>
+                            <input type="text" class="form-control" id="cal_address"
+                                placeholder="mohjSavDdQYHRYXcS3uS6ttaHP8amyvX78" readonly>
                         </div>
                     </div>
                 </div>
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
-                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#panelsStayOpen-collapseTwo">
                             Generated Address and Seed
                         </button>
                     </h2>
@@ -153,7 +178,8 @@
                         <div class="accordion-body">
                             <div>
                                 <label for="saved_addr1" class="form-label input-label mb-1">Address</label>
-                                <input type="text" class="form-control" id="saved_addr1" placeholder="mohjSavDdQYHRYXcS3uS6ttaHP8amyvX78" readonly>
+                                <input type="text" class="form-control" id="saved_addr1"
+                                    placeholder="mohjSavDdQYHRYXcS3uS6ttaHP8amyvX78" readonly>
                             </div>
                             <br>
                             <div class="input-group index-box">
@@ -165,7 +191,8 @@
                 </div>
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="panelsStayOpen-headingThree">
-                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#panelsStayOpen-collapseThree">
                             Important points to remember?
                         </button>
                     </h2>
@@ -173,12 +200,14 @@
                         <div class="accordion-body">
                             <ul style="list-style: disc;">
                                 <li>Generate the Master PrivateKey having seed 0.</li>
-                                <li>Master PrivateKey(constant) and Seed(variable) is use to generate the different address.</li>
+                                <li>Master PrivateKey(constant) and Seed(variable) is use to generate the different
+                                    address.</li>
                                 <li>Save the PrivateKey & Seed in Text file, if lost, can not recover.</li>
                                 <li>After receiving the tBTC, check your address for Previous TxID and Index.</li>
                                 <li>The calculated address must match the Sender address.</li>
                                 <li>Can only aggregate transaction from a single address.</li>
-                                <li>Generated address and Seed field shows the Calculated address having Fixed Master PrivateKey and specific seed value.</li>
+                                <li>Generated address and Seed field shows the Calculated address having Fixed Master
+                                    PrivateKey and specific seed value.</li>
                                 <li>Please return the tBTC back to faucet address.</li>
                             </ul>
                         </div>
@@ -192,24 +221,33 @@
             <div style="display: flex; justify-content: space-between;">
                 <strong>Contact:</strong>
                 <a class="footer" href="https://twitter.com/sha_shekhar_" target="_blank" title="Twitter">Twitter</a>
-                <a class="footer" href="https://www.linkedin.com/in/shashank-shekhar-a6470715b/" target="_blank" title="LinkedIn">LinkedIn</a>
-                <a class="footer" href="https://github.com/ShaShekhar/bitcointestnet" title="Github" target="_blank">Fork on Github</a>
-                
+                <a class="footer" href="https://www.linkedin.com/in/shashank-shekhar-a6470715b/" target="_blank"
+                    title="LinkedIn">LinkedIn</a>
+                <a class="footer" href="https://github.com/ShaShekhar/bitcoin-testnet" title="Github"
+                    target="_blank">Fork on Github</a>
+
             </div>
             <div style="display: flex; justify-content: space-between;">
-                <span>For questions, email <a class="footer" href="mailto:query@bitcointestnet.org" target="_blank">query@bitcointestnet.org</a></span>
-                <span>Powered by <a href="https://github.com/Blockstream/esplora/blob/master/API.md" target="_blank">Blockstream API</a></span>
+                <span>For questions, email <a class="footer" href="mailto:query@bitcointestnet.org"
+                        target="_blank">query@bitcointestnet.org</a></span>
+                <span>Powered by <a href="https://github.com/Blockstream/esplora/blob/master/API.md"
+                        target="_blank">Blockstream API</a></span>
             </div>
             <p>
-            Support this project at <a href="https://www.blockchain.com/btc/address/126XtyT2thLmt5imD3S8ZDLv1RXQ1nZEab" target="_blank">126XtyT2thLmt5imD3S8ZDLv1RXQ1nZEab</a>.
+                Support this project at <a
+                    href="https://www.blockchain.com/btc/address/126XtyT2thLmt5imD3S8ZDLv1RXQ1nZEab"
+                    target="_blank">126XtyT2thLmt5imD3S8ZDLv1RXQ1nZEab</a>.
             </p>
             <div>© Bitcoin Testnet Project 2022 Released under the MIT license</a></div>
         </footer>
     </div>
     <div style="margin-bottom: 10px;"></div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
 
     <script src="app.min.js"></script>
 </body>
+
 </html>
